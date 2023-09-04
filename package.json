@@ -6,20 +6,32 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "migrations:generate": "drizzle-kit generate:mysql",
+    "migrations:push": "drizzle-kit push:mysql",
+    "migrations:drop": "drizzle-kit drop --config=drizzle.config.ts"
   },
   "dependencies": {
+    "@planetscale/database": "^1.11.0",
     "@types/node": "20.5.9",
     "@types/react": "18.2.21",
     "@types/react-dom": "18.2.7",
     "autoprefixer": "10.4.15",
+    "drizzle-orm": "^0.28.5",
     "eslint": "8.48.0",
     "eslint-config-next": "13.4.19",
     "next": "13.4.19",
     "postcss": "8.4.29",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-hook-form": "^7.46.0",
     "tailwindcss": "3.3.3",
     "typescript": "5.2.2"
+  },
+  "devDependencies": {
+    "dotenv": "^16.3.1",
+    "drizzle-kit": "^0.19.13",
+    "prettier": "^3.0.3",
+    "prettier-plugin-tailwindcss": "^0.5.4"
   }
 }
