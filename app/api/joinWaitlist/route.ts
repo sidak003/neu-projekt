@@ -8,6 +8,6 @@ type Body = {
 
 export async function POST(request: Request) {
   const body: Body = await request.json();
-  const res = await db.insert(emails).values({ email: body.email });
+  const res = await db.insert(emails).values({ email: body.email ?? "hi@me" });
   return NextResponse.json({ res });
 }
