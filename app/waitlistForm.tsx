@@ -1,7 +1,5 @@
 "use client";
 import { useForm } from "react-hook-form";
-import Link from "next/link";
-import { resolve } from "path";
 import type { FieldValues } from "react-hook-form";
 
 export default function WaitlistForm() {
@@ -15,17 +13,17 @@ export default function WaitlistForm() {
 
   const onSubmit = async (data: FieldValues) => {
     const email = getValues("email");
-    try {
-      await fetch("/api/joinWaitlist", {
-        method: "POST",
-        body: JSON.stringify({
-          email: email,
-        }),
-      });
-      alert("Thanks for joining our Waitlist");
-    } catch (error) {
+    const res = await fetch("/api/joinWaitlist", {
+      method: "POST",
+      body: JSON.stringify({
+        email: email,
+      }),
+    });
+    if (!res.ok) {
       alert("Email not submitted, please try again");
+      return;
     }
+    alert("Thanks for joining our Waitlist");
     reset();
   };
 
@@ -45,8 +43,7 @@ export default function WaitlistForm() {
         placeholder="Enter your email..."
       ></input>
       <button
-        className="rounded border-2 border-text-100 bg-red-fire px-4 py-3 text-center font-bold shadow-drop transition-all hover:bg-yellow-fire active:translate-x-0.5 active:translate-y-0.5 active:shadow-none md:px-6 md:py-4 md:text-left md:text-h5"
-        type="submit"
+        className="rounded border-2 border-text-100 bg-red-fire px-4 py-3 text-center font-bold shadow-drop transition-all hover:bg-yellow-fire active:translate-x-0.5 active:translate-y-0.5 active:shadow-none disabled:bg-red-pastel md:px-6 md:py-4 md:text-left md:text-h5"
         disabled={isSubmitting}
       >
         Join Waitlist
