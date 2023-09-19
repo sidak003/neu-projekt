@@ -4,7 +4,7 @@ import { Merriweather, Inter } from "next/font/google";
 import Script from "next/script";
 
 const merriweather = Merriweather({
-  weight: ["700"],
+  weight: ["700", "900"],
   subsets: ["latin"],
   display: "swap",
   variable: "--merriweather",
