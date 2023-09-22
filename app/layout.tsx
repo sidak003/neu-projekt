@@ -11,22 +11,34 @@ const merriweather = Merriweather({
 });
 
 const inter = Inter({
-  weight: ["400", "700"],
+  weight: ["400", "600", "700"],
   subsets: ["latin"],
   display: "swap",
   variable: "--inter",
 });
 
 export const metadata: Metadata = {
-  title: "Coming Soon | The Startup Company",
+  title: "The Startup Company | Coming Fall 2023",
   description:
-    "We aim to build the largest and most ambitious startup community in India. Join the Startup Revolution Where Visionaries Unite",
+    "We help early-stage founders validate their ideas, craft winning business plans, and acquire their first 100 customers.",
   keywords: [
     "startup",
     "startup community",
+    "business",
     "the startup company",
     "founder's community",
   ],
+  robots: {
+    index: true,
+    follow: true,
+    nocache: true,
+    noimageindex: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      noimageindex: true,
+    },
+  },
   verification: {
     google: "u56UBUsH9bmU42AnL1cXuFLwOTcmf6n_b9QnpI8nwZ4",
   },
