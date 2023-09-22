@@ -1,4 +1,3 @@
-import { text } from "stream/consumers";
 import type { Config } from "tailwindcss";
 
 const config: Config = {
@@ -46,7 +45,8 @@ const config: Config = {
         },
       },
       boxShadow: {
-        drop: "4px 4px 0px 0px #161616",
+        drop: "3px 3px 0px 0px #161616",
+        "drop-mini": "2px 2px 0px 0px #161616",
       },
       fontSize: {
         h1: "4.25rem",

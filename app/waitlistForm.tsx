@@ -38,12 +38,12 @@ export default function WaitlistForm() {
           minLength: 5,
           maxLength: 128,
         })}
-        className="rounded border-2 border-text-100 px-4 py-3 text-text-75 shadow-drop outline-0 md:px-6 md:py-4 md:text-h5"
+        className="shadow-drop-mini rounded-sm border-2 border-text-100 px-4 py-3 text-text-75 outline-0 md:px-6 md:py-4 md:text-h5"
         type="email"
         placeholder="Enter your email..."
       ></input>
       <button
-        className="rounded border-2 border-text-100 bg-red-fire px-4 py-3 text-center font-bold shadow-drop transition-all hover:bg-yellow-fire active:translate-x-0.5 active:translate-y-0.5 active:shadow-none disabled:bg-red-pastel md:px-6 md:py-4 md:text-left md:text-h5"
+        className="shadow-drop-mini rounded-sm border-2 border-text-100 bg-red-fire px-4 py-3 text-center font-bold transition-all hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none disabled:bg-red-pastel md:px-6 md:py-4 md:text-h5"
         disabled={isSubmitting}
       >
         Join Waitlist
